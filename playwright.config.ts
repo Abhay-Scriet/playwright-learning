@@ -32,7 +32,7 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.saucedemo.com',
     storageState: 'auth.json',         // ← add here
-    headless: false,
+    headless: !!process.env.CI,
     screenshot: 'on',
     video: 'on',
     trace: 'on',
